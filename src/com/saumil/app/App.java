@@ -19,10 +19,10 @@ public class App {
                     newList.addNode(IO.prompt("What data do you want to add?"));
                     break;
                 case "R":
-                    // Remove Node Logic.
+                    newList.removeNodeByData(IO.prompt("Enter the data you are looking for."));
                     break;
                 case "M":
-                    // Modify Node Logic.
+                    newList.modifyNode(IO.prompt("Enter the old data."), IO.prompt("Enter the new data."));
                     break;
                 case "V":
                     System.out.println(newList);

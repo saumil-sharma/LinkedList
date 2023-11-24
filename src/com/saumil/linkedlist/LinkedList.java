@@ -39,4 +39,44 @@ public class LinkedList {
             curr = curr.getNext();
         }
     }
+
+    public Node removeNodeByData(String data){
+        Node currNode = rootNode;
+        Node prevNode = null;
+
+        while(currNode != null){
+            if(currNode.getData().equals(data)){
+                if(prevNode == null){
+                    this.rootNode = currNode.getNext();
+
+                    currNode.setNext(null);
+                    return currNode;
+                }
+
+                prevNode.setNext(currNode.getNext());
+                currNode.setNext(null);
+                return currNode;
+            }
+
+            prevNode = currNode;
+            currNode = currNode.getNext();
+        }
+
+        return null;
+    }
+
+    public boolean modifyNode(String oldData, String newData){
+        Node currNode = this.rootNode;
+
+        while(currNode != null){
+            if(currNode.getData().equals(oldData)){
+                currNode.setData(newData);
+                return true;
+            }
+
+            currNode = currNode.getNext();
+        }
+
+        return false;
+    }
 }
