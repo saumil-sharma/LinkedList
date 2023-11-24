@@ -44,3 +44,20 @@ In the other case, that means that a Node does exist and there is a basic Linked
 we iterate thru the whole LinkedList until we find a Node that has no Node in the `next` variable.
 
 We can start with the `rootNode` and make our way down the list using the logic above.
+
+## LinkedList.removeNodeByData()
+This method is responsible for removing a Node in the LinkedList 
+by data.
+
+You can give it a String `data`, for which it searches in the LinkedList to attempt
+to find and remove.
+
+This method also returns the Node that's passed. Similar to `addNode()` we also
+iterate thru the whole LinkedList to attempt to find it.
+
+## LinkedList.modifyByData()
+This method modifies the LinkedList at a Node it finds by the same iteration method as above.
+
+When a Node is found, we use the setter method `Node.setData(Str data)` to replace the data.
+
+If nothing is found, `false` is returned.
